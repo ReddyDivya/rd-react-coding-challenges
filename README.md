@@ -15,7 +15,7 @@ Follow these instructions to set up and run the project on your local machine.
 
 ## Installation
 
-### Installation of React
+### 1. Installation of React
 
 ### Step 1: Create the Vite Project
 
@@ -54,7 +54,7 @@ npm run dev
   ➜  Network: use --host to expose
 ```
 
-### Installation of Tailwind CSS
+### 2. Installation of Tailwind CSS
 
 ```
 npm install -D tailwindcss postcss autoprefixer

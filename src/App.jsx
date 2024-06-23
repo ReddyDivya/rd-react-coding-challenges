@@ -3,7 +3,7 @@ import './App.css';
 const App = () => {
   return (
     <>
-      <h1 className="text-5xl underline text-blue-500">React</h1>
+      <h1 className="text-3xl text-blue-500">React Coding Challenges</h1>
     </>
   );
 }
