@@ -100,6 +100,12 @@ module.exports = {
 @tailwind utilities;
 ```
 
+### 3. Install React Router Dom
+
+```
+npm install react-router-dom
+```
+
 ### Project Structure
 
 Your project structure should look something like this:
