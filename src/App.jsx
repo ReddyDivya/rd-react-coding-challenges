@@ -6,15 +6,18 @@ import DynamicList from './components/DynamicList';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <h1 className="text-3xl text-blue-500">React Coding Challenges</h1>
-      <Navbar/>
-      
-      <Routes>
-          <Route path="/counter" element ={<Counter/>}/>
-          <Route path="/dynamic-list" element={<DynamicList/>}/>
-      </Routes>
-    </BrowserRouter>
+    <div className="m-4">
+      <BrowserRouter>
+        <h1 className="text-3xl text-custom-blue text-center">React Coding Challenges</h1>
+        
+        <Navbar/>
+        <Routes>
+            <Route path="/counter" element ={<Counter/>}/>
+            <Route path="/dynamic-list" element={<DynamicList/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+    
   );
 }
 
