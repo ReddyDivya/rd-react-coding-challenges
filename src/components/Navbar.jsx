@@ -12,7 +12,7 @@ const Navbar = () => {
                         <Link to="/dynamic-list">2 - Dynamic List of Items with Strikethrough</Link>
                     </li>
                     <li>
-                        <Link to="/dynamic-list">3 - Color Picker with Hex Code Display</Link>
+                        <Link to="/color-picker">3 - Color Picker with Hex Code Display</Link>
                     </li>
                     <li>
                         <Link to="/dynamic-list">4 - Password Strength Checker</Link>

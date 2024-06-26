@@ -106,6 +106,12 @@ module.exports = {
 npm install react-router-dom
 ```
 
+### 4. Install React Color
+
+```
+npm install react-color
+```
+
 ### Project Structure
 
 Your project structure should look something like this:
