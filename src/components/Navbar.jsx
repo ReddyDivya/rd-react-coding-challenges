@@ -15,7 +15,7 @@ const Navbar = () => {
                         <Link to="/color-picker">3 - Color Picker with Hex Code Display</Link>
                     </li>
                     <li>
-                        <Link to="/dynamic-list">4 - Password Strength Checker</Link>
+                        <Link to="/password-strength">4 - Password Strength Checker</Link>
                     </li>
                 </ul>
             </nav>

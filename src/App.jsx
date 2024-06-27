@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Counter from './components/Counter';
 import DynamicList from './components/DynamicList';
 import ColorPicker from './components/ColorPicker';
+import PasswordStrengthChecker from './components/PasswordStrengthChecker';
 
 const App = () => {
   return (
@@ -16,6 +17,9 @@ const App = () => {
             <Route path="/counter" element ={<Counter/>}/>
             <Route path="/dynamic-list" element={<DynamicList/>}/>
             <Route path="/color-picker" element={<ColorPicker/>}/>
+            <Route path="/password-strength" element={<PasswordStrengthChecker/>}/>
+
+            
         </Routes>
       </BrowserRouter>
     </div>
