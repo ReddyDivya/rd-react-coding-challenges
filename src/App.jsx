@@ -5,6 +5,7 @@ import Counter from './components/Counter';
 import DynamicList from './components/DynamicList';
 import ColorPicker from './components/ColorPicker';
 import PasswordStrengthChecker from './components/PasswordStrengthChecker';
+import CountdownTimerWithAudio from './CountdownTimerWithAudio';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/dynamic-list" element={<DynamicList/>}/>
             <Route path="/color-picker" element={<ColorPicker/>}/>
             <Route path="/password-strength" element={<PasswordStrengthChecker/>}/>
+            <Route path="/countdown-timer-audio" element={<CountdownTimerWithAudio/>}/>
 
             
         </Routes>

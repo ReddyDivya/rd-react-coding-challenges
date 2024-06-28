@@ -17,6 +17,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/password-strength">4 - Password Strength Checker</Link>
                     </li>
+                    <li>
+                        <Link to="/countdown-timer-audio">5 - Countdown Timer with Audio</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
