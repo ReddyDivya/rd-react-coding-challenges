@@ -20,6 +20,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/countdown-timer-audio">5 - Countdown Timer with Audio</Link>
                     </li>
+                    <li>
+                        <Link to="/text-animation">5 - text-animation</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
