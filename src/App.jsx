@@ -5,8 +5,9 @@ import Counter from './components/Counter';
 import DynamicList from './components/DynamicList';
 import ColorPicker from './components/ColorPicker';
 import PasswordStrengthChecker from './components/PasswordStrengthChecker';
-import CountdownTimerWithAudio from './CountdownTimerWithAudio';
-import TextAnimation from './TextAnimation';
+import CountdownTimerWithAudio from './components/CountdownTimerWithAudio';
+import TextAnimation from './components/TextAnimation';
+import DynamicMovieList from './components/DynamicMovieList';
 
 const App = () => {
   return (
@@ -22,8 +23,8 @@ const App = () => {
             <Route path="/password-strength" element={<PasswordStrengthChecker/>}/>
             <Route path="/countdown-timer-audio" element={<CountdownTimerWithAudio/>}/>
             <Route path="/text-animation" element={<TextAnimation/>}/>
-
-            
+            <Route path="/text-animation" element={<TextAnimation/>}/>
+            <Route path="/dynamic-movies" element={<DynamicMovieList/>}/>
         </Routes>
       </BrowserRouter>
     </div>

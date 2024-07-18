@@ -23,6 +23,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/text-animation">5 - text-animation</Link>
                     </li>
+                    <li>
+                        <Link to="/dynamic-movies">6 - Dynamic Movie List with Filtering and Sorting</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

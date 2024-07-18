@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Timer from "./assets/Timer.mp3";
+import Timer from "../assets/Timer.mp3";
 
 const CountdownTimerWithAudio = () => {
   const initialTimer = 10;//initial timer
