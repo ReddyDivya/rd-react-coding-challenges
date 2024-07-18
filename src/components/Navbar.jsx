@@ -26,6 +26,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/dynamic-movies">6 - Dynamic Movie List with Filtering and Sorting</Link>
                     </li>
+                    <li>
+                        <Link to="/receipe-generator">Receipe Generator</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

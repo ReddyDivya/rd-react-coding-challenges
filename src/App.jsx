@@ -8,6 +8,7 @@ import PasswordStrengthChecker from './components/PasswordStrengthChecker';
 import CountdownTimerWithAudio from './components/CountdownTimerWithAudio';
 import TextAnimation from './components/TextAnimation';
 import DynamicMovieList from './components/DynamicMovieList';
+import RecipeGenerator from './components/RecipeGenerator';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/text-animation" element={<TextAnimation/>}/>
             <Route path="/text-animation" element={<TextAnimation/>}/>
             <Route path="/dynamic-movies" element={<DynamicMovieList/>}/>
+            <Route path="/receipe-generator" element={<RecipeGenerator/>}/>
         </Routes>
       </BrowserRouter>
     </div>
