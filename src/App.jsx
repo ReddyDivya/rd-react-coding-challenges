@@ -9,6 +9,7 @@ import CountdownTimerWithAudio from './components/CountdownTimerWithAudio';
 import TextAnimation from './components/TextAnimation';
 import DynamicMovieList from './components/DynamicMovieList';
 import RecipeGenerator from './components/RecipeGenerator';
+import MemeGenerator from './components/MemeGenerator';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/text-animation" element={<TextAnimation/>}/>
             <Route path="/dynamic-movies" element={<DynamicMovieList/>}/>
             <Route path="/receipe-generator" element={<RecipeGenerator/>}/>
+            <Route path="/meme-generator" element={<MemeGenerator/>}/>
         </Routes>
       </BrowserRouter>
     </div>
