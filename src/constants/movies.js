@@ -1,4 +1,4 @@
-const moviesList = [
+const movies = [
     {
         id: 1,
         genre: "Action",
@@ -31,4 +31,4 @@ const moviesList = [
     },
 ]
 
-export default moviesList;
+export default movies;

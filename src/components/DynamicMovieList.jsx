@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import moviesList from '../constants/movies';
+import movies from '../constants/movies';
 
 const DynamicMovieList = () => {
-  // State to hold the list of movies
-  const [movies, setMovies] = useState(moviesList);
 
   // State to hold the selected genre for filtering
   const [filterGenre, setFilterGenre] = useState('');
