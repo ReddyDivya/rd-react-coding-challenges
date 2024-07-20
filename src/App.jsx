@@ -10,6 +10,7 @@ import TextAnimation from './components/TextAnimation';
 import DynamicMovieList from './components/DynamicMovieList';
 import RecipeGenerator from './components/RecipeGenerator';
 import MemeGenerator from './components/MemeGenerator';
+import TextArtGenerator from './components/TextArtGenerator';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/dynamic-movies" element={<DynamicMovieList/>}/>
             <Route path="/receipe-generator" element={<RecipeGenerator/>}/>
             <Route path="/meme-generator" element={<MemeGenerator/>}/>
+            <Route path="/text-art-generator" element={<TextArtGenerator/>}/>
         </Routes>
       </BrowserRouter>
     </div>

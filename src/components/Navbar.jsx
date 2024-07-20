@@ -30,7 +30,10 @@ const Navbar = () => {
                         <Link to="/receipe-generator">7 -  Receipe Generator</Link>
                     </li>
                     <li>
-                        <Link to="/meme-generator">8 -  Meme Generator</Link>
+                        <Link to="/meme-generator">8 - Meme Generator</Link>
+                    </li>
+                    <li>
+                        <Link to="/text-art-generator">9 - Dynamically Generated Text Art</Link>
                     </li>
                 </ul>
             </nav>

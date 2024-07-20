@@ -1,59 +1,104 @@
-import {useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const MemeGenerator = () => {
- const [topText, setTopText] = useState('');
- const [bottomText, setBottomText] = useState('');
- const [meme, setMeme] = useState('');
- const [loading, setLoading] = useState(false);
- const [error, setError] = useState('');
+  // State to store memes fetched from API
+  const [memes, setMemes] = useState([]);
+  // State to store the top text for the meme
+  const [topText, setTopText] = useState('');
+  // State to store the bottom text for the meme
+  const [bottomText, setBottomText] = useState('');
+  // State to store the currently selected meme
+  const [selectedMeme, setSelectedMeme] = useState(null);
+  // State to handle loading state
+  const [loading, setLoading] = useState(false);
+  // State to handle error state
+  const [error, setError] = useState('');
 
- const fetchMeme = async () => {
+  // Fetch memes when the component mounts
+  useEffect(() => {
+    fetchMemes();
+  }, []);
+
+  // Fetch memes from the API
+  const fetchMemes = async () => {
     setLoading(true);
     setError('');
 
-    try{
-        const response = await axios.get("https://api.imgflip.com/get_memes");
-        const data = response.data.data.memes[0];
-        setMeme(data);
-    }
-    catch(error){
-        setError("Failed to fetch a meme.");
+    try {
+      const response = await axios.get("https://api.imgflip.com/get_memes");
+      setMemes(response.data.data.memes);
+    } catch (error) {
+      setError("Failed to fetch memes.");
     }
 
     setLoading(false);
- }//fetchMeme
+  };
+
+  // Handle meme selection from the dropdown
+  const handleSelectedMeme = (e) => {
+    const selectedMemeId = e.target.value;
+    const meme = memes.find(meme => meme.id === selectedMemeId);
+    setSelectedMeme(meme);
+  };
 
   return (
-    <div className="max-w-sm mx-auto p-8 bg-white shadow-lg rounded-md w-full mt-4">
-        <h1 className="text-2xl font-semibold text-blue-500 ">Meme Generator</h1>
+    <div className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-md w-full mt-12">
+      {/* Title */}
+      <h1 className="text-3xl font-semibold text-blue-600 mb-6 text-center">Meme Generator</h1>
 
-       <form onSubmit={fetchMeme} className="mb-4 mt-2">
-            <input type="text" placeholder="Top Text" value={topText} onChange={(e) => setTopText(e.target.value)}className="p-2 border border-gray-300 rounded w-full mb-2" />
-            <input placeholder="Bottom Text" type="text" value={bottomText} onChange={(e) => setBottomText(e.target.value)}className="p-2 border border-gray-300 rounded w-full mb-2" />
-            <button
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300"
-            onClick={fetchMeme}
-            >
-            Get Random Meme
-            </button>
-       </form>
-       
-       {loading && <p className="mt-4">loading..</p>}
-       {error && <p className="mt-4">{error}</p>}
+      {/* Meme   selection dropdown */}
+      <div className="mb-4">
+        <select
+          className="p-3 border border-gray-300 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onChange={handleSelectedMeme}
+          value={selectedMeme ? selectedMeme.id : ''}
+        >
+          <option value="">Select a Meme</option>
+          {memes.map(meme => (
+            <option key={meme.id} value={meme.id}>{meme.name}</option>
+          ))}
+        </select>
+      </div>
 
-       <div className="relative">
-            <img className="w-full h-auto rounded-lg mt-4" src={meme.url} alt={meme.name}/>
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center">
-                <p className="text-white text-4xl font-bold mt-2">{topText}</p>
-                <p className="text-white text-4xl font-bold mt-2">{bottomText}</p>
+      {/* Form to input top and bottom text */}
+      <form className="mb-4">
+        <input
+          type="text"
+          placeholder="Top Text"
+          value={topText}
+          onChange={(e) => setTopText(e.target.value)}
+          className="p-3 border border-gray-300 rounded w-full mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="text"
+          placeholder="Bottom Text"
+          value={bottomText}
+          onChange={(e) => setBottomText(e.target.value)}
+          className="p-3 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </form>
 
-            </div>
-       </div>
-      
-      
+      {/* Loading and error messages */}
+      {loading && <p className="text-center text-blue-500">Loading...</p>}
+      {error && <p className="text-center font-semibold text-red-500">{error}</p>}
+
+      {/* Display the selected meme with top and bottom text */}
+      {selectedMeme && (
+        <div className="relative mt-6">
+          <img
+            className="w-full h-auto rounded-lg"
+            src={selectedMeme.url}
+            alt={selectedMeme.name}
+          />
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center px-4 py-2">
+            <p className="text-white text-4xl font-bold drop-shadow-lg">{topText}</p>
+            <p className="text-white text-4xl font-bold drop-shadow-lg">{bottomText}</p>
+          </div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default MemeGenerator
+export default MemeGenerator;
