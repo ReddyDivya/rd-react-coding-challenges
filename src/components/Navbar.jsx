@@ -35,6 +35,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/text-art-generator">9 - Dynamically Generated Text Art</Link>
                     </li>
+                    <li>
+                        <Link to="/quiz-with-multiple-choice">10 - Simple Quiz App with Multiple Choice</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

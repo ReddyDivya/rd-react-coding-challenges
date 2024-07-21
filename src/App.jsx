@@ -11,6 +11,7 @@ import DynamicMovieList from './components/DynamicMovieList';
 import RecipeGenerator from './components/RecipeGenerator';
 import MemeGenerator from './components/MemeGenerator';
 import TextArtGenerator from './components/TextArtGenerator';
+import QuizAppMultipleChoice from './components/QuizAppMultipleChoice';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/receipe-generator" element={<RecipeGenerator/>}/>
             <Route path="/meme-generator" element={<MemeGenerator/>}/>
             <Route path="/text-art-generator" element={<TextArtGenerator/>}/>
+            <Route path="/quiz-with-multiple-choice" element={<QuizAppMultipleChoice/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
