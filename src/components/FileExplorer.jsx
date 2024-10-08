@@ -23,18 +23,16 @@ const FileExplorer = ({ explorer }) => {
           </span>
 
           {/* Conditionally render the folder's content based on the expanded state */}
-          {expand && (
-            <div className="ml-4 mt-2">
-              {explorer.items && explorer.items.length > 0 ? (
-                // Recursively render Folder components for the nested items
-                explorer.items.map((exp) => (
-                  <Folder key={exp.id} explorer={exp} expand={expand} />
-                ))
-              ) : (
-                <span>No items found</span>
-              )}
-            </div>
-          )}
+          <div style={{display: expand ? "block" : "none" }} className="ml-4 mt-2">
+            {explorer.items && explorer.items.length > 0 ? (
+              // Recursively render Folder components for the nested items
+              explorer.items.map((exp) => (
+                <Folder key={exp.id} explorer={exp} expand={expand} />
+              ))
+            ) : (
+              <span>No items found</span>
+            )}
+          </div>
         </div>
       ) : (
         // Render a file if the root is a file (although unlikely for root)

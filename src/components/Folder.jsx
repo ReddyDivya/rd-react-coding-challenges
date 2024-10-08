@@ -16,8 +16,7 @@ const Folder = ({ explorer, expand }) => {
           <span onClick={toggleExpand}>📁 {explorer.name}</span>
 
           {/* Conditionally render the folder's content based on the expanded state */}
-          {isExpanded && (
-            <div className="ml-4 mt-2">
+          <div style={{display: isExpanded ? "block" : "none"}} className="ml-4 mt-2">
               {explorer.items && explorer.items.length > 0 ? (
                 // Recursively render the Folder component for nested items
                 explorer.items.map((item) => (
@@ -27,7 +26,6 @@ const Folder = ({ explorer, expand }) => {
                 <span>No items found</span>
               )}
             </div>
-          )}
         </div>
       ) : (
         // Render file items
