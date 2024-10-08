@@ -12,6 +12,8 @@ import RecipeGenerator from './components/RecipeGenerator';
 import MemeGenerator from './components/MemeGenerator';
 import TextArtGenerator from './components/TextArtGenerator';
 import QuizAppMultipleChoice from './components/QuizAppMultipleChoice';
+import FileExplorer from './components/FileExplorer';
+import explorerData from "./constants/folderData";
 
 const App = () => {
   return (
@@ -33,6 +35,7 @@ const App = () => {
             <Route path="/meme-generator" element={<MemeGenerator/>}/>
             <Route path="/text-art-generator" element={<TextArtGenerator/>}/>
             <Route path="/quiz-with-multiple-choice" element={<QuizAppMultipleChoice/>}></Route>
+            <Route path="/file-explorer" element={<FileExplorer explorer={explorerData}/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

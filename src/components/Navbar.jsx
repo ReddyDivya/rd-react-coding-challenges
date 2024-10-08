@@ -38,6 +38,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/quiz-with-multiple-choice">10 - Simple Quiz App with Multiple Choice</Link>
                     </li>
+                    <li>
+                        <Link to="/file-explorer">11 - File Explorer</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
