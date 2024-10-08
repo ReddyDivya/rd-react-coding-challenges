@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 
 const Folder = ({ explorer, expand }) => {
+  const [exp, setExp] = useState(expand);
   
-
   return (
     <div>
       {explorer?.isFolder ? (
         <div>
-          <span>📁{explorer.name}</span>
-          <div style= {{display: expand ? "block" : "none"}}  className="ml-4 mt-2">
+          <span onClick={()=> setExp(!exp)}>📁{explorer.name}</span>
+          <div style= {{display: exp ? "block" : "none"}}  className="ml-4 mt-2">
             {explorer.items && explorer.items.length > 0 ? (
               explorer.items.map((item) => (
                 <Folder key={item.id} explorer={item} />
@@ -40,6 +41,9 @@ Folder.propTypes = {
         items: PropTypes.array,
       })
     ),
-  }).isRequired,
+  },
+).isRequired,
+expand: PropTypes.bool.isRequired, // Validating 'expand' as a separate prop
+
 };
 export default Folder;

@@ -11,6 +11,7 @@ const FileExplorer = ({explorer}) => {
         {explorer?.isFolder? ( 
           <div>
             <span key={explorer?.id} onClick={() => setExpand(!expand)}>📁{explorer?.name}</span>
+            
             <div style= {{display: expand ? "block" : "none"}} className="ml-4 mt-2">
               {explorer?.items && explorer?.items?.length > 0 ? 
                 (
@@ -23,7 +24,6 @@ const FileExplorer = ({explorer}) => {
         </div> 
         ) : (<div key={explorer?.id}>🗎{explorer?.name}</div>
       )}
-
     </div>
   )
 }
