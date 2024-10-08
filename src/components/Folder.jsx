@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 
 
-const Folder = ({ explorer }) => {
+const Folder = ({ explorer, expand }) => {
+  
+
   return (
     <div>
       {explorer?.isFolder ? (
         <div>
           <span>📁{explorer.name}</span>
-          <div className="ml-4 mt-2">
+          <div style= {{display: expand ? "block" : "none"}}  className="ml-4 mt-2">
             {explorer.items && explorer.items.length > 0 ? (
               explorer.items.map((item) => (
                 <Folder key={item.id} explorer={item} />
