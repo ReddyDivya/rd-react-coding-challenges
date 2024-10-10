@@ -1,62 +1,34 @@
-import PropTypes from 'prop-types';
-import Folder from './Folder';
-import { useState } from 'react';
+import explorer from "../constants/folderData"; // Importing static JSON data that represents the folder structure
+import Folder from "./Folder.jsx"; // Importing the Folder component for rendering folders/files
+import useTraverseTree from "../hooks/useTraverseTree.js"; // Importing the custom hook for tree traversal
+import { useState } from "react"; // Importing the useState hook from React
 
-const FileExplorer = ({ explorer }) => {
-  // State to manage the expansion of the top-level folder
-  const [expand, setExpand] = useState(false);
+// FileExplorer component: Manages the entire file explorer UI and handles inserting new folders/files
+const FileExplorer = () => {
+  
+  // State to store and manage the folder data (initialized with imported data)
+  const [explorerData, setExplorerData] = useState(explorer); // Bug Fix: Set initial state to `explorerData` instead of `undefined`
 
-  // Toggle the expand state for the root folder
-  const toggleExpand = () => setExpand(!expand);
+  // Destructure the insertNode function from the custom hook (used for inserting new nodes into the tree)
+  const { insertNode } = useTraverseTree();
+
+  // Function to handle the insertion of new folders/files into the explorer
+  const handleInsertNode = (folderId, item, isFolder) => {
+    // Call insertNode to add the new folder/file at the correct location in the tree
+    const finalTree = insertNode(explorerData, folderId, item, isFolder);
+
+    // Update the explorer data state with the newly modified tree structure
+    setExplorerData(finalTree);
+  };
 
   return (
     <div className="max-w-md mx-auto w-full p-8 bg-white shadow-lg rounded-lg mt-2">
-      <h1 className="text-3xl font-semibold text-blue-600 mb-6 text-center">
-        File Explorer
-      </h1>
-
-      {explorer.isFolder ? (
-        <div>
-          {/* Root folder name with clickable expand/collapse functionality */}
-          <span key={explorer.id} onClick={toggleExpand}>
-            📁 {explorer.name}
-          </span>
-
-          {/* Conditionally render the folder's content based on the expanded state */}
-          <div style={{display: expand ? "block" : "none" }} className="ml-4 mt-2">
-            {explorer.items && explorer.items.length > 0 ? (
-              // Recursively render Folder components for the nested items
-              explorer.items.map((exp) => (
-                <Folder key={exp.id} explorer={exp} expand={expand} />
-              ))
-            ) : (
-              <span>No items found</span>
-            )}
-          </div>
-        </div>
-      ) : (
-        // Render a file if the root is a file (although unlikely for root)
-        <div key={explorer.id}>🗎 {explorer.name}</div>
-      )}
+      <h1 className="text-3xl font-semibold text-blue-600 mb-6 text-center">File Explorer</h1>
+      
+      {/* Render the Folder component and pass explorer data and handleInsertNode function as props */}
+      <Folder handleInsertNode={handleInsertNode} explorer={explorerData} />
     </div>
   );
-};
-
-// Prop validation for the FileExplorer component
-FileExplorer.propTypes = {
-  explorer: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    isFolder: PropTypes.bool.isRequired,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        isFolder: PropTypes.bool.isRequired,
-        items: PropTypes.array,
-      })
-    ),
-  }).isRequired,
 };
 
 export default FileExplorer;
