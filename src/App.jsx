@@ -13,6 +13,7 @@ import MemeGenerator from './components/MemeGenerator';
 import TextArtGenerator from './components/TextArtGenerator';
 import QuizAppMultipleChoice from './components/QuizAppMultipleChoice';
 import FileExplorer from './components/FileExplorer';
+import Pagination from './components/Pagination';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/text-art-generator" element={<TextArtGenerator/>}/>
             <Route path="/quiz-with-multiple-choice" element={<QuizAppMultipleChoice/>}></Route>
             <Route path="/file-explorer" element={<FileExplorer/>}></Route>
+            <Route path="pagination" element={<Pagination/>}/>
         </Routes>
       </BrowserRouter>
     </div>

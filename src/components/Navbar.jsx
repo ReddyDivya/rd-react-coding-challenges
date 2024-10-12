@@ -41,6 +41,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/file-explorer">11 - File Explorer</Link>
                     </li>
+                    <li>
+                        <Link to="/pagination">12 - Pagination</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
