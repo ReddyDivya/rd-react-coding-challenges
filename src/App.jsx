@@ -14,6 +14,7 @@ import TextArtGenerator from './components/TextArtGenerator';
 import QuizAppMultipleChoice from './components/QuizAppMultipleChoice';
 import FileExplorer from './components/FileExplorer';
 import Pagination from './components/Pagination';
+import ProgressBar from './components/ProgressBar';
 
 const App = () => {
   return (
@@ -36,7 +37,8 @@ const App = () => {
             <Route path="/text-art-generator" element={<TextArtGenerator/>}/>
             <Route path="/quiz-with-multiple-choice" element={<QuizAppMultipleChoice/>}></Route>
             <Route path="/file-explorer" element={<FileExplorer/>}></Route>
-            <Route path="pagination" element={<Pagination/>}/>
+            <Route path="/pagination" element={<Pagination/>}/>
+            <Route path="/progressbar" element={<ProgressBar/>}/>
         </Routes>
       </BrowserRouter>
     </div>

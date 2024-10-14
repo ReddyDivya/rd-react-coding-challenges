@@ -44,6 +44,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/pagination">12 - Pagination</Link>
                     </li>
+                    <li>
+                        <Link to="/progressbar">13 - Progress Bar</Link>
+                    </li>
                 </ul>
             </nav>
         </div>
