@@ -47,6 +47,9 @@ const Navbar = () => {
                     <li>
                         <Link to="/progressbar">13 - Progress Bar</Link>
                     </li>
+                    <li>
+                        <Link to="/Accordion">14 - Accordion</Link>
+                    </li>
                 </ul>
             </nav>
         </div>

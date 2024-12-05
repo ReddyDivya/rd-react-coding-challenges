@@ -15,6 +15,7 @@ import QuizAppMultipleChoice from './components/QuizAppMultipleChoice';
 import FileExplorer from './components/FileExplorer';
 import Pagination from './components/Pagination';
 import ProgressBar from './components/ProgressBar';
+import Accordion from './components/Accordion';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/file-explorer" element={<FileExplorer/>}></Route>
             <Route path="/pagination" element={<Pagination/>}/>
             <Route path="/progressbar" element={<ProgressBar/>}/>
+            <Route path="/accordion" element={<Accordion/>}/>
         </Routes>
       </BrowserRouter>
     </div>
