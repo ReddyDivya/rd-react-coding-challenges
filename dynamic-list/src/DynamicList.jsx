@@ -20,26 +20,25 @@ const DynamicList = () => {
   };
 
   return (
-    <ul>
-      {/* Iterating over 'items' state to render each list item */}
-      {items.map((item, index) => (
-        <li key={index}>
-          {" "}
-          {/* Using 'index' as key (not ideal but okay for static lists) */}
-          <input
-            type="checkbox"
-            checked={item.completed} // Checkbox reflects the 'completed' state
-            onChange={() => handleToggleCompleted(index)} // Toggles the item's completion status when clicked
-          />
-          <span
-            // Applying strikethrough style if the task is completed
-            style={{ textDecoration: item.completed ? "line-through" : "none" }}
-          >
-            {item.text}
-          </span>
-        </li>
-      ))}
-    </ul>
+    <div className="todo-container">
+      <ul>
+        {/* Iterating over 'items' state to render each list item */}
+        {items.map((item, index) => (
+          <li key={index}>
+            {" "}
+            {/* Using 'index' as key (not ideal but okay for static lists) */}
+            <input
+              type="checkbox"
+              checked={item.completed} // Checkbox reflects the 'completed' state
+              onChange={() => handleToggleCompleted(index)} // Toggles the item's completion status when clicked
+            />
+            <span className={item.completed ? "completed" : ""}>
+              {item.text}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

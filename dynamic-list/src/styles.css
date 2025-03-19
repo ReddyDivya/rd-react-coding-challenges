@@ -1,4 +1,53 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* General Styling - Applies to the entire page */
+body {
+  font-family: Arial, sans-serif; /* Sets a clean and readable font */
+  background-color: #f4f4f4; /* Light gray background for better contrast */
+  display: flex; /* Enables flexbox for centering content */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Full height of the viewport */
+  width: 80%; /* Sets the width to 80% of the viewport */
+  text-align: center; /* Centers the text inside the body */
+  margin: 0 auto; /* Centers the content horizontally and removes default margin */
+}
+
+/* Todo List Container - Styles the main todo list box */
+.todo-container {
+  background: white; /* White background for a clean look */
+  padding: 20px; /* Adds space inside the container */
+  border-radius: 8px; /* Adds rounded corners for a modern design */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+  width: 300px; /* Sets a fixed width for the container */
+  text-align: center; /* Centers text inside the container */
+}
+
+/* Todo Items - Removes default list styles */
+ul {
+  list-style-type: none; /* Removes bullet points from the list */
+  padding: 0; /* Removes default padding */
+}
+
+/* List Item Styling - Each todo item */
+li {
+  display: flex; /* Enables flexbox to align elements inside each list item */
+  align-items: center; /* Aligns checkbox and text vertically */
+  justify-content: space-between; /* Spaces out the checkbox and text */
+  padding: 10px; /* Adds spacing around each item */
+  border-bottom: 1px solid #ddd; /* Adds a light border between items */
+}
+
+li:last-child {
+  border-bottom: none; /* Removes the border from the last item */
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  transform: scale(1.2); /* Increases checkbox size for better visibility */
+  margin-right: 10px; /* Adds spacing between checkbox and text */
+}
+
+/* Completed Item Style - Strikes through completed todo items */
+.completed {
+  text-decoration: line-through; /* Adds a strikethrough effect for completed tasks */
+  color: gray; /* Changes text color to indicate completion */
 }
