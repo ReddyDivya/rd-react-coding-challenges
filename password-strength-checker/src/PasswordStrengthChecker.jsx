@@ -11,9 +11,8 @@ const PasswordStrengthChecker = () => {
     if (password.length < 8)
       setStrength("Weak"); // Passwords shorter than 8 characters are weak
     else if (password.length > 8 && password.length <= 12)
-      setStrength(
-        "Medium"
-      ); // Passwords between 8 and 12 characters are medium strength
+      setStrength("Medium");
+    // Passwords between 8 and 12 characters are medium strength
     else setStrength("Strong"); // Passwords longer than 12 characters are strong
   };
 
@@ -27,15 +26,16 @@ const PasswordStrengthChecker = () => {
   }, [password]); // Runs whenever password changes
 
   return (
-    <div>
+    <div className="password-container">
       <input
+        className="password-input"
         type="password"
         placeholder="Enter your password"
         value={password}
         onChange={(e) => setPassword(e.target.value)} // Updates password state on input change
       />
       {/* Displays password strength message with dynamic class for styling */}
-      <p className={`${strength.toLowerCase()}`}>
+      <p className={`strength-message ${strength.toLowerCase()}`}>
         {strength === "Weak" && "Password is weak."}
         {strength === "Medium" && "Password is medium."}
         {strength === "Strong" && "Password is strong."}
