@@ -1,0 +1,55 @@
+/* Apply a default font and center-align text in the entire app */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Container styling for the movie list */
+.movie-list-container {
+  width: 80%; /* Set the container width to 80% of the viewport */
+  margin: 20px auto; /* Center the container with automatic left & right margins */
+  padding: 20px; /* Add padding inside the container for spacing */
+  border-radius: 10px; /* Apply rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a light shadow for a subtle 3D effect */
+  font-family: sans-serif; /* Ensure a clean, readable font */
+}
+
+/* Style for labels (Filter by Genre, Sort by) */
+label {
+  font-size: 16px; /* Set readable text size */
+  font-weight: bold; /* Make the text bold */
+  margin-right: 10px; /* Add spacing between label and dropdown */
+}
+
+/* Styling for dropdowns (Genre Filter & Sort Option) */
+select {
+  width: 100px; /* Set a fixed width for dropdowns */
+  padding: 6px; /* Add padding inside the dropdown for better clickability */
+  font-size: 14px; /* Set readable text size */
+  border-radius: 5px; /* Round the edges of the dropdown */
+  border: 1px solid #ccc; /* Add a subtle border */
+  margin-right: 10px; /* Add spacing between dropdowns */
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+}
+
+/* Remove default bullet points from the movie list */
+ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin-top: 20px; /* Add space between dropdowns and the movie list */
+}
+
+/* Style for individual movie list items */
+li {
+  background: white; /* Set background color to white */
+  padding: 10px; /* Add padding inside each list item */
+  border-radius: 5px; /* Round the edges of the list item */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+  font-size: 16px; /* Set readable text size */
+  margin-bottom: 8px; /* Add spacing between movie list items */
+}
+
+/* Apply alternating background color for better readability */
+li:nth-child(odd) {
+  background-color: #f1f1f1; /* Light grey background for every other item */
+}
