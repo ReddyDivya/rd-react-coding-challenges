@@ -11,12 +11,17 @@ const ColorPicker = () => {
   };
 
   return (
-    <div>
+    <div className="color-picker-container">
       {/* Displaying the currently selected color's hex code */}
-      <h3>Selected Color's Hex code: {selectedColor}</h3>
-
+      <div
+        className="selected-color-box"
+        style={{ backgroundColor: selectedColor }}
+      >
+        Selected Color's Hex code: {selectedColor}
+      </div>
       {/* Color input field that allows users to pick a color */}
       <input
+        className="color-input"
         type="color" // Displays a color picker
         value={selectedColor} // Binds the input value to the state
         // ✅ Correct: Passing function reference, React will call it with event object
@@ -31,6 +36,14 @@ const ColorPicker = () => {
         - This explicitly calls handleSelectedColor with the event parameter.
         */
       />
+      <div>
+        <button
+          className="reset-button"
+          onClick={() => setSelectedColor("#ffffff")}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 };

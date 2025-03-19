@@ -1,4 +1,49 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* Container styling for the color picker */
+.color-picker-container {
+  text-align: center; /* Centers text and elements */
+  padding: 20px; /* Adds space inside the container */
+  background-color: #f5f5f5; /* Light gray background */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+  max-width: 300px; /* Sets maximum width */
+  margin: 20px auto; /* Centers the container horizontally */
+}
+
+/* Styling for the color input field */
+.color-input {
+  cursor: pointer; /* Changes the cursor to indicate interactivity */
+  border: none; /* Removes the default border */
+  width: 100px; /* Sets width of the input */
+  height: 40px; /* Sets height of the input */
+}
+
+/* Box that displays the selected color */
+.selected-color-box {
+  margin-top: 15px; /* Adds space above the box */
+  padding: 10px; /* Adds space inside the box */
+  font-size: 16px; /* Sets font size */
+  font-weight: bold; /* Makes the text bold */
+  color: #333; /* Dark gray text color */
+  border-radius: 5px; /* Rounds the corners */
+  border: 1px solid #ccc; /* Adds a light gray border */
+  background-color: white; /* Sets background color to white */
+}
+
+/* Styling for the reset button */
+.reset-button {
+  margin-top: 10px; /* Adds space above the button */
+  padding: 8px 12px; /* Adds padding inside the button */
+  border: none; /* Removes the default border */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  font-size: 14px; /* Sets font size */
+  font-weight: bold; /* Makes the text bold */
+  border-radius: 5px; /* Rounds the corners */
+  cursor: pointer; /* Changes the cursor to indicate interactivity */
+  transition: background 0.3s; /* Smooth transition effect */
+}
+
+/* Hover effect for the reset button */
+.reset-button:hover {
+  background-color: #0056b3; /* Darker blue when hovered */
 }
