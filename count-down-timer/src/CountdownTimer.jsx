@@ -37,7 +37,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div>
+    <div className="countdown-container">
       {/* Display the countdown timer */}
       <h4>Countdown: {timer}</h4>
 

@@ -1,4 +1,33 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* Set up the basic styles for the entire page */
+body {
+  font-family: sans-serif; /* Use a clean, readable font */
+  display: flex; /* Enable flexbox for easy centering */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  text-align: center; /* Ensure text inside elements is centered */
+  background-color: #f4f4f4; /* Light gray background for a soft look */
+  margin: 0; /* Remove default body margin */
+}
+
+/* Style for the countdown timer container */
+.countdown-container {
+  padding: 20px; /* Add space inside the container */
+  background-color: #ffffff; /* White background for a clean look */
+  border-radius: 10px; /* Rounded corners for a modern design */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  width: 80%; /* Make it responsive by setting a percentage width */
+}
+
+/* Style for the countdown number */
+h4 {
+  font-size: 24px; /* Large font size for visibility */
+  color: #333; /* Dark gray for good contrast */
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+/* Style for the message when the timer reaches 0 */
+p {
+  font-size: 18px; /* Medium font size for readability */
+  color: red; /* Highlight the message in red */
+  font-weight: bold; /* Make it stand out */
 }
