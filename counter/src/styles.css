@@ -1,4 +1,52 @@
+/* Styles for the entire App */
 .App {
-  font-family: sans-serif;
   text-align: center;
+}
+
+/* Styles for the Counter Component */
+.counter-container {
+  text-align: center; /* Aligns content to the center */
+  font-family: Arial, sans-serif; /* Sets the font style */
+  margin-top: 50px; /* Adds space at the top */
+}
+
+/* Styles for the counter value display */
+.counter-value {
+  font-size: 2rem; /* Increases font size */
+  font-weight: bold; /* Makes text bold */
+  margin: 10px 0; /* Adds space above and below */
+}
+
+/* General button styles */
+button {
+  font-size: 1.2rem; /* Increases font size */
+  padding: 10px 15px; /* Adds spacing inside buttons */
+  margin: 5px; /* Adds space between buttons */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background 0.3s; /* Smooth background color transition */
+}
+
+/* Hover effect for all buttons */
+button:hover {
+  opacity: 0.8; /* Reduces opacity slightly on hover */
+}
+
+/* Styles for the increment button */
+.increment {
+  background-color: #4caf50; /* Green color */
+  color: white; /* White text */
+}
+
+/* Styles for the decrement button */
+.decrement {
+  background-color: #f44336; /* Red color */
+  color: white; /* White text */
+}
+
+/* Styles for the reset button */
+.reset {
+  background-color: #008cba; /* Blue color */
+  color: white; /* White text */
 }

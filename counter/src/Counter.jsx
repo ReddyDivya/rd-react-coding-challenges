@@ -15,15 +15,19 @@ const Counter = () => {
   };
 
   return (
-    <div>
+    <div className="counter-container">
       {/* Display the current count */}
-      <h3>{count}</h3>
+      <h3 className="counter-value">{count}</h3>
 
       {/* Button to increase count */}
-      <button onClick={handleIncrement}>Increment</button>
+      <button className="increment" onClick={handleIncrement}>
+        Increment
+      </button>
 
       {/* Button to decrease count */}
-      <button onClick={handleDecrement}>Decrement</button>
+      <button className="decrement" onClick={handleDecrement}>
+        Decrement
+      </button>
     </div>
   );
 };
