@@ -1,0 +1,36 @@
+/* Styles for the main container */
+.App {
+  font-family: sans-serif; /* Ensures a clean and modern font style */
+  text-align: center; /* Centers text within the container */
+  margin-top: 50px; /* Adds space at the top for better positioning */
+
+  background-color: #f8f9fa; /* Light gray background for a softer look */
+  min-height: 100vh; /* Ensures the container takes up the full viewport height */
+
+  display: flex; /* Enables flexbox for better alignment */
+  flex-direction: column; /* Arranges content in a vertical stack */
+  align-items: center; /* Centers child elements horizontally */
+  justify-content: center; /* Centers child elements vertically */
+}
+
+/* Styles for the paragraph elements */
+p {
+  font-size: 24px; /* Sets the font size for readability */
+  font-weight: bold; /* Makes text stand out */
+  color: #333; /* Dark gray color for better contrast and readability */
+
+  background-color: white; /* Adds a white background for clarity */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Creates a soft shadow for a subtle 3D effect */
+  border-radius: 8px; /* Rounds the corners for a modern look */
+  padding: 12px 20px; /* Adds spacing inside the box for better readability */
+
+  transition: all 0.3s ease-in-out; /* Ensures a smooth transition effect for hover animations */
+}
+
+/* Hover effect for the paragraph */
+p:hover {
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2); /* Enhances shadow for a more pronounced hover effect */
+  transform: translateY(
+    -3px
+  ); /* Moves the element slightly upward on hover for an interactive feel */
+}
