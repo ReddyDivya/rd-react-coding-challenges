@@ -1,0 +1,43 @@
+/* Styles for the main app container */
+.App {
+  font-family: sans-serif; /* Sets a clean, modern font */
+  text-align: center; /* Centers text inside the container */
+  padding: 20px; /* Adds spacing inside the container */
+  background-color: #f9f9f9; /* Light gray background for a soft look */
+  min-height: 100vh; /* Ensures the container takes up the full viewport height */
+}
+
+/* Styles for the input field */
+input {
+  padding: 10px; /* Adds spacing inside the input for better readability */
+  border: 2px solid gray; /* Sets a default border color */
+  border-radius: 5px; /* Rounds the corners of the input box */
+  font-size: 14px; /* Slightly larger text for better visibility */
+  outline: none; /* Removes the default focus outline */
+  transition: border 0.3s ease-in-out; /* Adds a smooth transition effect when the border color changes */
+}
+
+/* Hover effect for the input field */
+input:hover {
+  border: 2px solid lightblue; /* Changes the border color when hovered */
+}
+
+/* Focus effect to enhance user experience */
+input:focus {
+  border: 2px solid dodgerblue; /* Highlights the input field when focused */
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Adds a soft glow effect around the input when active */
+}
+
+/* Container for the generated text art */
+.textArt {
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges text elements vertically */
+  align-items: center; /* Centers text elements horizontally */
+  margin-top: 2px; /* Adds a small margin to create space between the input and the text art */
+}
+
+/* Style for individual text characters */
+.text-art span {
+  font-weight: bold; /* Makes the characters bold */
+  color: #333; /* Uses a dark color for better contrast and readability */
+}
