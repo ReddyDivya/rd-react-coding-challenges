@@ -1,0 +1,53 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  padding: 8px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+
+.memeImage {
+  margin-top: 20px;
+  max-width: 100%;
+  border: 2px solid #000;
+}
