@@ -10,6 +10,6 @@
 - [6 - Dynamic Movie List with Filtering and Sorting](https://github.com/ReddyDivya/rd-react-coding-challenges/tree/main/movie-list)
 - [7 - Text Animation Component (Fade/Scroll)](https://github.com/ReddyDivya/rd-react-coding-challenges/tree/main/text-animation)
 - [8 - Dynamically Generated Text Art](https://github.com/ReddyDivya/rd-react-coding-challenges/tree/main/text-art-generator)
-- []()
+- [9 - Meme Generator with Custom Text](https://github.com/ReddyDivya/rd-react-coding-challenges/tree/main/meme-generator)
 - []()
 
