@@ -1,0 +1,88 @@
+/* Styling for the main application container */
+.App {
+  font-family: sans-serif; /* Sets the font style */
+  text-align: center; /* Centers text */
+  background-color: #f8f8f8; /* Light gray background */
+  padding: 20px; /* Adds padding around the content */
+}
+
+/* Container for the entire app layout */
+.app-container {
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Arranges children in a column */
+  align-items: center; /* Centers content horizontally */
+  gap: 10px; /* Space between child elements */
+}
+
+/* Styling for the "Generate Recipes" button */
+.generate-button {
+  padding: 10px 10px; /* Adds space inside the button */
+  font-size: 16px; /* Sets font size */
+  background-color: #ff5722; /* Orange background */
+  color: white; /* White text color */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 5px; /* Rounds the corners */
+  transition: 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover effect for the button */
+.generate-button:hover {
+  background-color: #e64a19; /* Darker orange color on hover */
+}
+
+/* Grid container for displaying recipe items */
+.recipe-list {
+  display: grid; /* Enables Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 20px; /* Adds space between grid items */
+  justify-content: center; /* Centers the grid within the container */
+  width: 90%; /* Limits the width to 90% of the parent container */
+}
+
+/* Individual recipe card styling */
+.recipe-container {
+  background-color: white; /* White background for contrast */
+  padding: 15px; /* Adds padding inside the card */
+  border-radius: 10px; /* Rounds the corners */
+  text-align: left; /* Aligns text to the left */
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  transition: 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover effect for the recipe card */
+.recipe-container:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+/* Styling for the rating badge */
+.rating {
+  background-color: green; /* Green background */
+  width: auto; /* Adjusts width based on content */
+  padding: 5px 10px; /* Adds padding inside the rating */
+  color: white; /* White text */
+  border-radius: 5px; /* Rounds the corners */
+  font-weight: bold; /* Makes the text bold */
+}
+
+/* Styling for meal type (e.g., Breakfast, Lunch, etc.) */
+.meal-type {
+  display: block; /* Ensures it appears on a new line */
+  margin-top: 5px; /* Adds space above */
+  font-size: 14px; /* Sets font size */
+  color: #555; /* Dark gray text */
+}
+
+/* List styling (used inside recipe details) */
+ul {
+  padding-left: 20px; /* Adds left padding for indentation */
+}
+
+/* Heading styles */
+h2,
+h4,
+h5 {
+  margin: 10px 0; /* Adds vertical spacing around headings */
+}
