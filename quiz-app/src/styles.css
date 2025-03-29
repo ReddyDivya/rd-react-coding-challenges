@@ -1,0 +1,95 @@
+/* ========== General Styling ========== */
+/* Sets the default font for the entire page */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4; /* Light gray background for better contrast */
+  display: flex;
+  justify-content: center; /* Centers the quiz horizontally */
+  align-items: center; /* Centers the quiz vertically */
+  height: 100vh; /* Makes the body take the full viewport height */
+  margin: 0; /* Removes default margin */
+}
+
+/* ========== Quiz Container ========== */
+/* Styles the quiz box */
+.quiz-container {
+  background: white; /* White background for contrast against the page */
+  max-width: 400px; /* Restricts maximum width to 400px */
+  width: 90%; /* Makes it responsive for smaller screens */
+  padding: 20px; /* Adds space inside the container */
+  border-radius: 10px; /* Softens corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a light shadow effect */
+  text-align: center; /* Centers text inside the quiz */
+}
+
+/* ========== Question Heading ========== */
+/* Styles the question heading */
+h3 {
+  font-size: 1.5rem; /* Increases font size for better visibility */
+  color: #333; /* Dark gray for readability */
+}
+
+/* ========== Score Display ========== */
+/* Styles the score text */
+p {
+  font-size: 1rem; /* Standard text size */
+  font-weight: bold; /* Makes the score more prominent */
+  color: #555; /* Slightly darker gray for better readability */
+}
+
+/* ========== Options List ========== */
+/* Removes default list styling */
+ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+/* ========== Option Items ========== */
+/* Styles each option (answer choices) */
+li {
+  background: #f9f9f9; /* Light gray background */
+  padding: 10px; /* Adds spacing inside each option */
+  margin: 8px 0; /* Adds space between options */
+  border-radius: 5px; /* Softens corners */
+  display: flex; /* Aligns radio button and text properly */
+  align-items: center; /* Centers content vertically */
+  cursor: pointer; /* Changes cursor to pointer to indicate clickable */
+  transition: 0.3s; /* Smooth transition effect on hover */
+}
+
+/* Changes background color when hovered over */
+li:hover {
+  background: #e3e3e3;
+}
+
+/* ========== Radio Button ========== */
+/* Adjusts spacing for radio buttons */
+input[type="radio"] {
+  margin-right: 10px; /* Adds space between radio button and text */
+}
+
+/* ========== Next Button ========== */
+/* Styles the Next button */
+button {
+  background-color: #007bff; /* Blue color for visibility */
+  color: white; /* White text for contrast */
+  padding: 10px 15px; /* Adds padding for better clickability */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Softens button corners */
+  cursor: pointer; /* Shows pointer cursor when hovered */
+  font-size: 1rem; /* Standard font size */
+  margin-top: 15px; /* Adds space above the button */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Changes button color on hover */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Quiz Completion Message ========== */
+/* Styles the message shown after quiz completion */
+.quiz-container p:last-child {
+  font-size: 1.2rem; /* Increases font size for importance */
+  color: #28a745; /* Green color to indicate success */
+}
